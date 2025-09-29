@@ -1,0 +1,34 @@
+@use 'functions' as *;
+
+// SPACING
+$spacing-0: pxToRem(0);
+$spacing-100: pxToRem(8);
+$spacing-200: pxToRem(16);
+$spacing-300: pxToRem(24);
+$spacing-400: pxToRem(32);
+$spacing-500: pxToRem(40);
+
+// COLORS
+
+$white: hsl(0, 100%, 100%);
+$black: hsl(0, 0%, 0%);
+
+// NAVY
+
+$navy950: hsl(226, 43%, 10%);
+$navy900: hsl(235, 46%, 20%);
+$navy800: hsl(235, 41%, 34%);
+$navy200: hsl(236, 100%, 87%);
+
+// PURPLE
+
+$purple700: hsl(264, 64%, 52%);
+$purple600: hsl(246, 80%, 60%);
+$purple500: hsl(235, 45%, 61%);
+
+$orange300: hsl(15, 100%, 70%);
+$blue300: hsl(195, 74%, 62%);
+$pink400: hsl(348, 100%, 68%);
+$green400: hsl(145, 58%, 55%);
+$yellow300: hsl(43, 84%, 65%);
+$grey200: hsl(0, 0%, 85%);

@@ -1,3 +1,5 @@
+@use 'functions' as *;
+
 *,
 *::before,
 *::after {
@@ -8,6 +10,10 @@
   margin: 0;
   padding: 0;
   font: inherit;
+}
+
+body {
+  font-size: pxToRem(18);
 }
 
 img,

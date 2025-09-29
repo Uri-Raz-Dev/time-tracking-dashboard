@@ -1,0 +1,12 @@
+@use 'functions' as *;
+@use 'variables' as *;
+@use 'variables' as *;
+
+.profile {
+  > div {
+    img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}

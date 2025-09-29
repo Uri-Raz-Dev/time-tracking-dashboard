@@ -1,0 +1,13 @@
+@use 'functions' as *;
+
+@mixin media($breakpoint) {
+  @if $breakpoint == tablet {
+    @media screen and (min-width: pxToRem(768)) {
+      @content;
+    }
+  } @else if $breakpoint == desktop {
+    @media screen and (min-width: pxToRem(1440)) {
+      @content;
+    }
+  }
+}
