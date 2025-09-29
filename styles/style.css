@@ -30,10 +30,6 @@ ol {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   min-height: 100vh;
   min-height: 100svh;
   background-color: hsl(226, 43%, 10%);
@@ -43,9 +39,126 @@ body {
   display: grid;
   margin-inline: 1.5rem;
   margin-block: 5.0625rem;
-  background-color: aqua;
-  grid-auto-flow: row;
   grid-template-columns: repeat(auto-fit, minmax(20.4375rem, 1fr));
+  gap: 1.5rem;
+}
+#cards-container > *:not(.profile) {
+  border-radius: 15px;
+  display: grid;
+  height: 10rem;
+  grid-template-rows: 1fr 7.625rem;
+}
+#cards-container > *:not(.profile) > :nth-child(2) {
+  padding: 1.5rem;
+}
+
+.profile {
+  display: grid;
+  min-height: 12.6875rem;
+  grid-template-rows: 8.3125rem 1fr;
+  gap: 1.5rem;
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 15px;
+}
+.profile > div {
+  display: flex;
+  gap: 1.5rem;
+  background-color: hsl(246, 80%, 60%);
+  padding: 2rem;
+  border-radius: 15px;
+}
+.profile > div div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.profile ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+
+.card:not(.profile) > :first-child {
+  position: relative;
+}
+.card:not(.profile) > :first-child img {
+  position: absolute;
+  opacity: 90%;
+  right: 17px;
+}
+.card:not(.profile) > :nth-child(2) {
+  border-radius: 15px;
+  background-color: hsl(235, 46%, 20%);
+  margin-left: -0.3px;
+  margin-right: -0.3px;
+  margin-bottom: -0.3px;
+}
+.card:not(.profile) > :nth-child(2) > * {
+  display: flex;
+  justify-content: space-between;
+}
+.card:not(.profile) > :nth-child(2) > :first-child {
+  margin-block-end: 0.5rem;
+}
+
+.orange {
+  background-color: hsl(15, 100%, 70%);
+}
+
+.blue {
+  background-color: hsl(195, 74%, 62%);
+}
+
+.pink {
+  background-color: hsl(348, 100%, 68%);
+}
+
+.green {
+  background-color: hsl(145, 58%, 55%);
+}
+
+.purple {
+  background-color: hsl(264, 64%, 52%);
+}
+
+.yellow {
+  background-color: hsl(43, 84%, 65%);
+}
+
+.card:nth-of-type(2) > div:first-of-type img {
+  top: -10px;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 13%, black 5%, black 60%, transparent 60%);
+          mask-image: linear-gradient(to bottom, transparent 13%, black 5%, black 60%, transparent 60%);
+}
+
+.card:nth-of-type(3) > div:first-of-type img {
+  top: -4px;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 5.5%, black 5%, black 55%, transparent 55%);
+          mask-image: linear-gradient(to bottom, transparent 5.5%, black 5%, black 55%, transparent 55%);
+}
+
+.card:nth-of-type(4) > div:first-of-type img {
+  top: -9.5px;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 12%, black 5%, black 60%, transparent 60%);
+          mask-image: linear-gradient(to bottom, transparent 12%, black 5%, black 60%, transparent 60%);
+}
+
+.card:nth-of-type(5) > div:first-of-type img {
+  top: -2px;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 5%, black 5%, black 72.5%, transparent 72.5%);
+          mask-image: linear-gradient(to bottom, transparent 5%, black 5%, black 72.5%, transparent 72.5%);
+}
+
+.card:nth-of-type(6) > div:first-of-type img {
+  top: -12px;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 12%, black 5%, black 50%, transparent 50%);
+          mask-image: linear-gradient(to bottom, transparent 12%, black 5%, black 50%, transparent 50%);
+}
+
+.card:nth-of-type(7) > div:first-of-type img {
+  top: -11px;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 16%, black 5%, black 73%, transparent 73%);
+          mask-image: linear-gradient(to bottom, transparent 16%, black 5%, black 73%, transparent 73%);
 }
 
 .profile > div img {

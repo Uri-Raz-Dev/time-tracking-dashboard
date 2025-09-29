@@ -1,27 +1,147 @@
 @use 'functions' as *;
 @use 'variables' as *;
-@use 'variables' as *;
 
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh; //fallback in case of old browser doesn't support svh
+  min-height: 100vh; //fallback in case of an old browser that doesn't support svh
   min-height: 100svh;
   background-color: $navy950;
 }
 
 #cards-container {
   display: grid;
+  // background-color: aqua;
   margin-inline: pxToRem(24);
   margin-block: pxToRem(81);
-  background-color: aqua;
-  grid-auto-flow: row;
   grid-template-columns: repeat(auto-fit, minmax(pxToRem(327), 1fr));
+  gap: pxToRem(24);
+  > *:not(.profile) {
+    border-radius: 15px;
+    display: grid;
+    height: pxToRem(160);
+    grid-template-rows: 1fr pxToRem(122);
+    > :nth-child(2) {
+      // background-color: $navy900;
+      padding: pxToRem(24);
+    }
+  }
 }
 
 .profile {
+  display: grid;
+  min-height: pxToRem(203);
+  grid-template-rows: pxToRem(133) 1fr;
+  gap: pxToRem(24);
+  background-color: $navy900;
+  border-radius: 15px;
+
   > div {
+    display: flex;
+    gap: pxToRem(24);
+    background-color: $purple600;
+    padding: pxToRem(32);
+    border-radius: 15px;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: pxToRem(8);
+    }
+  }
+  ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+  }
+}
+
+.card:not(.profile) {
+  // background-color: pink;
+  // border-radius: 15px;
+  > :first-child {
+    position: relative;
+
+    img {
+      position: absolute;
+      opacity: 90%;
+      // filter: brightness(0) saturate(100%);
+      right: 17px;
+      // top: -10px;
+      // mask-image: linear-gradient(black 55%, transparent 50%);
+    }
+  }
+  > :nth-child(2) {
+    // display: flex;
+    // justify-content: space-between;
+    border-radius: 15px;
+    background-color: $navy900;
+    margin-left: -0.3px;
+    margin-right: -0.3px;
+    margin-bottom: -0.3px;
+    > * {
+      display: flex;
+      justify-content: space-between;
+    }
+    > :first-child {
+      margin-block-end: pxToRem(8);
+    }
+  }
+}
+
+@each $name, $value in $colors {
+  //testing @each rule of sass
+  .#{$name} {
+    background-color: $value;
+  }
+}
+
+.card:nth-of-type(2) {
+  > div:first-of-type {
+    img {
+      top: -10px;
+      mask-image: linear-gradient(to bottom, transparent 13%, black 5%, black 60%, transparent 60%);
+    }
+  }
+}
+.card:nth-of-type(3) {
+  > div:first-of-type {
+    img {
+      top: -4px;
+      mask-image: linear-gradient(to bottom, transparent 5.5%, black 5%, black 55%, transparent 55%);
+    }
+  }
+}
+
+.card:nth-of-type(4) {
+  > div:first-of-type {
+    img {
+      top: -9.5px;
+      mask-image: linear-gradient(to bottom, transparent 12%, black 5%, black 60%, transparent 60%);
+    }
+  }
+}
+
+.card:nth-of-type(5) {
+  > div:first-of-type {
+    img {
+      top: -2px;
+      mask-image: linear-gradient(to bottom, transparent 5%, black 5%, black 72.5%, transparent 72.5%);
+    }
+  }
+}
+
+.card:nth-of-type(6) {
+  > div:first-of-type {
+    img {
+      top: -12px;
+      mask-image: linear-gradient(to bottom, transparent 12%, black 5%, black 50%, transparent 50%);
+    }
+  }
+}
+.card:nth-of-type(7) {
+  > div:first-of-type {
+    img {
+      top: -11px;
+      mask-image: linear-gradient(to bottom, transparent 16%, black 5%, black 73%, transparent 73%);
+    }
   }
 }
