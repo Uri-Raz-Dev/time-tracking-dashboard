@@ -1,12 +1,46 @@
 @use 'functions' as *;
 @use 'variables' as *;
-@use 'variables' as *;
+@use 'typography' as *;
 
 .profile {
   > div {
     img {
       width: 60px;
       height: 60px;
+    }
+    :first-child {
+      @include text-preset-6;
+      color: $navy200;
+    }
+    :nth-child(2) {
+      @include text-preset-4;
+      color: $white;
+    }
+  }
+  > ul {
+    @include text-preset-5-regular;
+    color: $purple500;
+  }
+}
+
+.card:not(.profile) {
+  > :nth-child(2) {
+    :first-child {
+      :first-child {
+        @include text-preset-5-medium;
+        color: $white;
+        // choose subject of each card play,work,etc
+      }
+    }
+    :nth-child(2) {
+      :first-child {
+        @include text-preset-3;
+        color: $white;
+      }
+      :nth-child(2) {
+        @include text-preset-6;
+        color: $navy200;
+      }
     }
   }
 }

@@ -10,9 +10,11 @@ body {
 #cards-container {
   display: grid;
   // background-color: aqua;
+  // align-content: center;
+  justify-content: center;
   margin-inline: pxToRem(24);
   margin-block: pxToRem(81);
-  grid-template-columns: repeat(auto-fit, minmax(pxToRem(327), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(pxToRem(275), 1fr));
   gap: pxToRem(24);
   > *:not(.profile) {
     border-radius: 15px;
@@ -59,12 +61,12 @@ body {
   // border-radius: 15px;
   > :first-child {
     position: relative;
-
+    overflow: hidden;
     img {
       position: absolute;
       opacity: 90%;
       // filter: brightness(0) saturate(100%);
-      right: 17px;
+      right: pxToRem(17);
       // top: -10px;
       // mask-image: linear-gradient(black 55%, transparent 50%);
     }
@@ -74,12 +76,13 @@ body {
     // justify-content: space-between;
     border-radius: 15px;
     background-color: $navy900;
-    margin-left: -0.3px;
-    margin-right: -0.3px;
-    margin-bottom: -0.3px;
+    margin-left: -1px;
+    margin-right: -1px;
+    margin-bottom: -1px;
     > * {
       display: flex;
       justify-content: space-between;
+      align-items: center;
     }
     > :first-child {
       margin-block-end: pxToRem(8);
@@ -88,25 +91,25 @@ body {
 }
 
 @each $name, $value in $colors {
-  //testing @each rule of sass
+  //testing @each rule of sass for each card color
   .#{$name} {
     background-color: $value;
   }
 }
 
+// card top image
+
 .card:nth-of-type(2) {
   > div:first-of-type {
     img {
-      top: -10px;
-      mask-image: linear-gradient(to bottom, transparent 13%, black 5%, black 60%, transparent 60%);
+      top: pxToRem(-10);
     }
   }
 }
 .card:nth-of-type(3) {
   > div:first-of-type {
     img {
-      top: -4px;
-      mask-image: linear-gradient(to bottom, transparent 5.5%, black 5%, black 55%, transparent 55%);
+      top: pxToRem(-4);
     }
   }
 }
@@ -114,8 +117,7 @@ body {
 .card:nth-of-type(4) {
   > div:first-of-type {
     img {
-      top: -9.5px;
-      mask-image: linear-gradient(to bottom, transparent 12%, black 5%, black 60%, transparent 60%);
+      top: pxToRem(-9.5);
     }
   }
 }
@@ -123,8 +125,7 @@ body {
 .card:nth-of-type(5) {
   > div:first-of-type {
     img {
-      top: -2px;
-      mask-image: linear-gradient(to bottom, transparent 5%, black 5%, black 72.5%, transparent 72.5%);
+      top: pxToRem(-2);
     }
   }
 }
@@ -132,16 +133,14 @@ body {
 .card:nth-of-type(6) {
   > div:first-of-type {
     img {
-      top: -12px;
-      mask-image: linear-gradient(to bottom, transparent 12%, black 5%, black 50%, transparent 50%);
+      top: pxToRem(-12);
     }
   }
 }
 .card:nth-of-type(7) {
   > div:first-of-type {
     img {
-      top: -11px;
-      mask-image: linear-gradient(to bottom, transparent 16%, black 5%, black 73%, transparent 73%);
+      top: pxToRem(-11);
     }
   }
 }

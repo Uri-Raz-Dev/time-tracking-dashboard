@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 *,
 *::before,
 *::after {
@@ -37,9 +38,10 @@ body {
 
 #cards-container {
   display: grid;
+  justify-content: center;
   margin-inline: 1.5rem;
   margin-block: 5.0625rem;
-  grid-template-columns: repeat(auto-fit, minmax(20.4375rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(17.1875rem, 1fr));
   gap: 1.5rem;
 }
 #cards-container > *:not(.profile) {
@@ -80,22 +82,24 @@ body {
 
 .card:not(.profile) > :first-child {
   position: relative;
+  overflow: hidden;
 }
 .card:not(.profile) > :first-child img {
   position: absolute;
   opacity: 90%;
-  right: 17px;
+  right: 1.0625rem;
 }
 .card:not(.profile) > :nth-child(2) {
   border-radius: 15px;
   background-color: hsl(235, 46%, 20%);
-  margin-left: -0.3px;
-  margin-right: -0.3px;
-  margin-bottom: -0.3px;
+  margin-left: -1px;
+  margin-right: -1px;
+  margin-bottom: -1px;
 }
 .card:not(.profile) > :nth-child(2) > * {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .card:not(.profile) > :nth-child(2) > :first-child {
   margin-block-end: 0.5rem;
@@ -126,42 +130,79 @@ body {
 }
 
 .card:nth-of-type(2) > div:first-of-type img {
-  top: -10px;
-  -webkit-mask-image: linear-gradient(to bottom, transparent 13%, black 5%, black 60%, transparent 60%);
-          mask-image: linear-gradient(to bottom, transparent 13%, black 5%, black 60%, transparent 60%);
+  top: -0.625rem;
 }
 
 .card:nth-of-type(3) > div:first-of-type img {
-  top: -4px;
-  -webkit-mask-image: linear-gradient(to bottom, transparent 5.5%, black 5%, black 55%, transparent 55%);
-          mask-image: linear-gradient(to bottom, transparent 5.5%, black 5%, black 55%, transparent 55%);
+  top: -0.25rem;
 }
 
 .card:nth-of-type(4) > div:first-of-type img {
-  top: -9.5px;
-  -webkit-mask-image: linear-gradient(to bottom, transparent 12%, black 5%, black 60%, transparent 60%);
-          mask-image: linear-gradient(to bottom, transparent 12%, black 5%, black 60%, transparent 60%);
+  top: -0.59375rem;
 }
 
 .card:nth-of-type(5) > div:first-of-type img {
-  top: -2px;
-  -webkit-mask-image: linear-gradient(to bottom, transparent 5%, black 5%, black 72.5%, transparent 72.5%);
-          mask-image: linear-gradient(to bottom, transparent 5%, black 5%, black 72.5%, transparent 72.5%);
+  top: -0.125rem;
 }
 
 .card:nth-of-type(6) > div:first-of-type img {
-  top: -12px;
-  -webkit-mask-image: linear-gradient(to bottom, transparent 12%, black 5%, black 50%, transparent 50%);
-          mask-image: linear-gradient(to bottom, transparent 12%, black 5%, black 50%, transparent 50%);
+  top: -0.75rem;
 }
 
 .card:nth-of-type(7) > div:first-of-type img {
-  top: -11px;
-  -webkit-mask-image: linear-gradient(to bottom, transparent 16%, black 5%, black 73%, transparent 73%);
-          mask-image: linear-gradient(to bottom, transparent 16%, black 5%, black 73%, transparent 73%);
+  top: -0.6875rem;
 }
 
 .profile > div img {
   width: 60px;
   height: 60px;
+}
+.profile > div :first-child {
+  font-family: "Rubik", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: hsl(236, 100%, 87%);
+}
+.profile > div :nth-child(2) {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.1666;
+  letter-spacing: 0;
+  color: hsl(0, 100%, 100%);
+}
+.profile > ul {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.1666;
+  letter-spacing: 0;
+  color: hsl(235, 45%, 61%);
+}
+
+.card:not(.profile) > :nth-child(2) :first-child :first-child {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.1666;
+  letter-spacing: 0;
+  color: hsl(0, 100%, 100%);
+}
+.card:not(.profile) > :nth-child(2) :nth-child(2) :first-child {
+  font-family: "Rubik", sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.1875;
+  letter-spacing: 0;
+  color: hsl(0, 100%, 100%);
+}
+.card:not(.profile) > :nth-child(2) :nth-child(2) :nth-child(2) {
+  font-family: "Rubik", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: hsl(236, 100%, 87%);
 }/*# sourceMappingURL=style.css.map */
