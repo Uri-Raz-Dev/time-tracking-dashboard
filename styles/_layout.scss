@@ -1,5 +1,6 @@
 @use 'functions' as *;
 @use 'variables' as *;
+@use 'media' as *;
 
 body {
   min-height: 100vh; //fallback in case of an old browser that doesn't support svh
@@ -9,12 +10,26 @@ body {
 
 #cards-container {
   display: grid;
+  place-content: center;
+  min-height: 100vh;
+  // min-height: 100svh;
   // background-color: aqua;
   // align-content: center;
-  justify-content: center;
-  margin-inline: pxToRem(24);
-  margin-block: pxToRem(81);
-  grid-template-columns: repeat(auto-fit, minmax(pxToRem(275), 1fr));
+  // justify-content: center;
+  // align-content: center
+  // align-items: center;
+  // justify-items: center;
+  // margin-inline: pxToRem(81);
+  // margin-block: pxToRem(24);
+  // margin-inline: 10vw;
+  // margin-block: 20vw;
+  grid-template-columns: repeat(auto-fit, minmax(pxToRem(275), auto));
+
+  // @include media(tablet) {
+  //   margin-inline: pxToRem(78);
+  //   margin-block: pxToRem(174);
+  // }
+
   gap: pxToRem(24);
   > *:not(.profile) {
     border-radius: 15px;
@@ -35,7 +50,7 @@ body {
   gap: pxToRem(24);
   background-color: $navy900;
   border-radius: 15px;
-
+  grid-column: 1/-1;
   > div {
     display: flex;
     gap: pxToRem(24);
@@ -51,8 +66,14 @@ body {
   }
   ul {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
+    grid-template-columns: repeat(3, auto);
+    // justify-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: pxToRem(42);
+    li {
+      width: 100%;
+    }
     li:hover {
       cursor: pointer;
     }

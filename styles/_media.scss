@@ -6,7 +6,7 @@
       @content;
     }
   } @else if $breakpoint == desktop {
-    @media screen and (min-width: pxToRem(1440)) {
+    @media screen and (min-width: pxToRem(1280)) {
       @content;
     }
   }

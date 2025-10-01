@@ -38,10 +38,9 @@ body {
 
 #cards-container {
   display: grid;
-  justify-content: center;
-  margin-inline: 1.5rem;
-  margin-block: 5.0625rem;
-  grid-template-columns: repeat(auto-fit, minmax(17.1875rem, 1fr));
+  place-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(auto-fit, minmax(17.1875rem, auto));
   gap: 1.5rem;
 }
 #cards-container > *:not(.profile) {
@@ -61,6 +60,7 @@ body {
   gap: 1.5rem;
   background-color: hsl(235, 46%, 20%);
   border-radius: 15px;
+  grid-column: 1/-1;
 }
 .profile > div {
   display: flex;
@@ -76,8 +76,13 @@ body {
 }
 .profile ul {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
+  grid-template-columns: repeat(3, auto);
+  text-align: center;
+  justify-content: center;
+  gap: 2.625rem;
+}
+.profile ul li {
+  width: 100%;
 }
 .profile ul li:hover {
   cursor: pointer;
