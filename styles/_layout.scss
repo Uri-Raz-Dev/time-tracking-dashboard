@@ -53,6 +53,9 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
+    li:hover {
+      cursor: pointer;
+    }
   }
 }
 
@@ -91,7 +94,7 @@ body {
 }
 
 @each $name, $value in $colors {
-  //testing @each rule of sass for each card color
+  //give bg color to each card
   .#{$name} {
     background-color: $value;
   }

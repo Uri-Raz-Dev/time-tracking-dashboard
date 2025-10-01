@@ -79,6 +79,9 @@ body {
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
 }
+.profile ul li:hover {
+  cursor: pointer;
+}
 
 .card:not(.profile) > :first-child {
   position: relative;
