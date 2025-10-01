@@ -90,7 +90,7 @@ function setInitState(array) {
 }
 
 function fetchData(timeFrame = 'weekly') {
-  fetch('/data.json')
+  fetch('data.json')
     .then((response) => {
       if (!response.ok) return console.log('Oops! Something went wrong.')
 
