@@ -21,12 +21,8 @@ body {
   @include media(tablet) {
     margin-block: 0;
     grid-template-columns: repeat(3, minmax(pxToRem(188), auto));
-
-    // grid-template-columns: none;
   }
   @include media(desktop) {
-    // grid-template-columns: repeat(minmax(pxToRem(300), auto));
-
     .profile {
       grid-area: prof;
     }
@@ -65,7 +61,6 @@ body {
     }
 
     > :nth-child(2) {
-      // background-color: $navy900;
       padding: pxToRem(24);
     }
   }
@@ -101,7 +96,6 @@ body {
   ul {
     display: grid;
     grid-template-columns: repeat(3, auto);
-    // justify-items: center;
     text-align: center;
     justify-content: center;
     gap: pxToRem(42);
@@ -115,23 +109,16 @@ body {
 }
 
 .card:not(.profile) {
-  // background-color: pink;
-  // border-radius: 15px;
   > :first-child {
     position: relative;
     overflow: hidden;
     img {
       position: absolute;
       opacity: 90%;
-      // filter: brightness(0) saturate(100%);
       right: pxToRem(17);
-      // top: -10px;
-      // mask-image: linear-gradient(black 55%, transparent 50%);
     }
   }
   > :nth-child(2) {
-    // display: flex;
-    // justify-content: space-between;
     border-radius: 15px;
     background-color: $navy900;
     margin-left: -1px;
@@ -142,10 +129,7 @@ body {
         background-color: $navy800;
       }
     }
-    // @include media(tablet) {
-    //   display: flex;
-    //   flex-direction: column;
-    // }
+
     > * {
       display: flex;
       justify-content: space-between;
@@ -153,20 +137,14 @@ body {
     }
     > :first-child {
       margin-block-end: pxToRem(8);
-      // @include media(tablet) {
-      //   justify-content: normal;
-      //   :first-child {
-      //   }
-      // }
+
       :nth-child(2) {
-        // background-color: green;
         &:hover {
           filter: invert(100%) sepia(3%) saturate(12%) hue-rotate(103deg) brightness(1005%) contrast(105%);
         }
       }
     }
     > :nth-child(2) {
-      // background-color: red;
       @include media(tablet) {
         flex-direction: column;
         align-items: start;
@@ -188,13 +166,10 @@ body {
 }
 
 @each $name, $value in $colors {
-  //give bg color to each card
   .#{$name} {
     background-color: $value;
   }
 }
-
-// card top image
 
 .card:nth-of-type(2) {
   > div:first-of-type {

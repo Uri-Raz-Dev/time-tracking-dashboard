@@ -68,7 +68,7 @@ function populateDOM(data) {
 
 function handleClick(data) {
   const timeList = document.getElementById('time-list')
-  // convert node list in an array
+  // convert node list into an array
   const arr = [...timeList.children]
   arr.forEach((item) => {
     item.addEventListener('click', () => {
