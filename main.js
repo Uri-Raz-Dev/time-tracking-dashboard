@@ -44,7 +44,7 @@ function appendItem(item) {
 
   container.innerHTML += `
   
-     <li class="card ${color} ${item.title.toLowerCase()}">
+     <li class="card ${color} ${item.title.toLowerCase() === 'self care' ? 'self-care' : item.title.toLowerCase()}">
         <div>
           <img src="./images/icon-${item.title.toLowerCase() === 'self care' ? 'self-care' : item.title.toLowerCase()}.svg" alt="${item.title.toLowerCase()} icon" />
         </div>

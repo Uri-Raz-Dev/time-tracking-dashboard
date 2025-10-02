@@ -39,15 +39,57 @@ body {
 #cards-container {
   display: grid;
   place-content: center;
+  align-content: center;
   min-height: 100vh;
-  grid-template-columns: repeat(auto-fit, minmax(17.1875rem, auto));
+  min-height: 100svh;
+  margin-block: 5.0625rem;
+  grid-template-columns: repeat(auto-fit, minmax(18.75rem, auto));
   gap: 1.5rem;
+}
+@media screen and (min-width: 48rem) {
+  #cards-container {
+    margin-block: 0;
+    grid-template-columns: repeat(minmax(11.75rem, auto));
+  }
+}
+@media screen and (min-width: 80rem) {
+  #cards-container {
+    grid-template-areas: "prof work play study" "prof exercise social selfcare";
+  }
+  #cards-container .profile {
+    grid-area: prof;
+  }
+  #cards-container .work {
+    grid-area: work;
+  }
+  #cards-container .play {
+    grid-area: play;
+  }
+  #cards-container .study {
+    grid-area: study;
+  }
+  #cards-container .exercise {
+    grid-area: exercise;
+  }
+  #cards-container .social {
+    grid-area: social;
+  }
+  #cards-container .self-care {
+    grid-area: selfcare;
+  }
 }
 #cards-container > *:not(.profile) {
   border-radius: 15px;
   display: grid;
-  height: 10rem;
+  min-height: 10rem;
   grid-template-rows: 1fr 7.625rem;
+}
+@media screen and (min-width: 48rem) {
+  #cards-container > *:not(.profile) {
+    min-height: 13.3125rem;
+    min-width: 11.75rem;
+    grid-template-rows: 1fr 11.25rem;
+  }
 }
 #cards-container > *:not(.profile) > :nth-child(2) {
   padding: 1.5rem;
@@ -111,6 +153,13 @@ body {
 }
 .card:not(.profile) > :nth-child(2) > :first-child {
   margin-block-end: 0.5rem;
+}
+@media screen and (min-width: 48rem) {
+  .card:not(.profile) > :nth-child(2) > :nth-child(2) {
+    flex-direction: column;
+    align-items: start;
+    gap: 0.5rem;
+  }
 }
 
 .orange {
@@ -205,6 +254,15 @@ body {
   line-height: 1.1875;
   letter-spacing: 0;
   color: hsl(0, 100%, 100%);
+}
+@media screen and (min-width: 48rem) {
+  .card:not(.profile) > :nth-child(2) :nth-child(2) :first-child {
+    font-family: "Rubik", sans-serif;
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.1785;
+    letter-spacing: 0;
+  }
 }
 .card:not(.profile) > :nth-child(2) :nth-child(2) :nth-child(2) {
   font-family: "Rubik", sans-serif;

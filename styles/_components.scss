@@ -1,6 +1,7 @@
 @use 'functions' as *;
 @use 'variables' as *;
 @use 'typography' as *;
+@use 'media' as *;
 
 .profile {
   > div {
@@ -36,6 +37,9 @@
       :first-child {
         @include text-preset-3;
         color: $white;
+        @include media(tablet) {
+          @include text-preset-1;
+        }
       }
       :nth-child(2) {
         @include text-preset-6;

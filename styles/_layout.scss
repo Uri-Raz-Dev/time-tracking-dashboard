@@ -11,31 +11,54 @@ body {
 #cards-container {
   display: grid;
   place-content: center;
+  align-content: center;
   min-height: 100vh;
-  // min-height: 100svh;
-  // background-color: aqua;
-  // align-content: center;
-  // justify-content: center;
-  // align-content: center
-  // align-items: center;
-  // justify-items: center;
-  // margin-inline: pxToRem(81);
-  // margin-block: pxToRem(24);
-  // margin-inline: 10vw;
-  // margin-block: 20vw;
-  grid-template-columns: repeat(auto-fit, minmax(pxToRem(275), auto));
-
-  // @include media(tablet) {
-  //   margin-inline: pxToRem(78);
-  //   margin-block: pxToRem(174);
-  // }
-
+  min-height: 100svh;
+  margin-block: pxToRem(81);
+  grid-template-columns: repeat(auto-fit, minmax(pxToRem(300), auto));
   gap: pxToRem(24);
+
+  @include media(tablet) {
+    margin-block: 0;
+    grid-template-columns: repeat(minmax(pxToRem(188), auto));
+  }
+  @include media(desktop) {
+    .profile {
+      grid-area: prof;
+    }
+
+    .work {
+      grid-area: work;
+    }
+    .play {
+      grid-area: play;
+    }
+    .study {
+      grid-area: study;
+    }
+    .exercise {
+      grid-area: exercise;
+    }
+    .social {
+      grid-area: social;
+    }
+    .self-care {
+      grid-area: selfcare;
+    }
+    grid-template-areas:
+      'prof work play study'
+      'prof exercise social selfcare';
+  }
   > *:not(.profile) {
     border-radius: 15px;
     display: grid;
-    height: pxToRem(160);
+    min-height: pxToRem(160);
     grid-template-rows: 1fr pxToRem(122);
+    @include media(tablet) {
+      min-height: pxToRem(213);
+      min-width: pxToRem(188);
+      grid-template-rows: 1fr pxToRem(180);
+    }
     > :nth-child(2) {
       // background-color: $navy900;
       padding: pxToRem(24);
@@ -103,6 +126,10 @@ body {
     margin-left: -1px;
     margin-right: -1px;
     margin-bottom: -1px;
+    // @include media(tablet) {
+    //   display: flex;
+    //   flex-direction: column;
+    // }
     > * {
       display: flex;
       justify-content: space-between;
@@ -110,6 +137,19 @@ body {
     }
     > :first-child {
       margin-block-end: pxToRem(8);
+      // @include media(tablet) {
+      //   justify-content: normal;
+      //   :first-child {
+      //   }
+      // }
+    }
+    > :nth-child(2) {
+      // background-color: red;
+      @include media(tablet) {
+        flex-direction: column;
+        align-items: start;
+        gap: pxToRem(8);
+      }
     }
   }
 }
