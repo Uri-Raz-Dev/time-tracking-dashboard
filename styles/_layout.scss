@@ -15,14 +15,18 @@ body {
   min-height: 100vh;
   min-height: 100svh;
   margin-block: pxToRem(81);
-  grid-template-columns: repeat(auto-fit, minmax(pxToRem(300), auto));
+  grid-template-columns: repeat(minmax(pxToRem(300), auto));
   gap: pxToRem(24);
 
   @include media(tablet) {
     margin-block: 0;
-    grid-template-columns: repeat(minmax(pxToRem(188), auto));
+    grid-template-columns: repeat(3, minmax(pxToRem(188), auto));
+
+    // grid-template-columns: none;
   }
   @include media(desktop) {
+    // grid-template-columns: repeat(minmax(pxToRem(300), auto));
+
     .profile {
       grid-area: prof;
     }
@@ -59,6 +63,7 @@ body {
       min-width: pxToRem(188);
       grid-template-rows: 1fr pxToRem(180);
     }
+
     > :nth-child(2) {
       // background-color: $navy900;
       padding: pxToRem(24);
@@ -74,13 +79,19 @@ body {
   background-color: $navy900;
   border-radius: 15px;
   grid-column: 1/-1;
+  @include media(desktop) {
+    grid-template-columns: pxToRem(255);
+    grid-template-rows: 2fr 1fr;
+  }
   > div {
     display: flex;
     gap: pxToRem(24);
     background-color: $purple600;
     padding: pxToRem(32);
     border-radius: 15px;
-
+    @include media(desktop) {
+      flex-direction: column;
+    }
     div {
       display: flex;
       flex-direction: column;
@@ -126,6 +137,11 @@ body {
     margin-left: -1px;
     margin-right: -1px;
     margin-bottom: -1px;
+    @include media(desktop) {
+      &:hover {
+        background-color: $navy800;
+      }
+    }
     // @include media(tablet) {
     //   display: flex;
     //   flex-direction: column;
@@ -142,6 +158,12 @@ body {
       //   :first-child {
       //   }
       // }
+      :nth-child(2) {
+        // background-color: green;
+        &:hover {
+          filter: invert(100%) sepia(3%) saturate(12%) hue-rotate(103deg) brightness(1005%) contrast(105%);
+        }
+      }
     }
     > :nth-child(2) {
       // background-color: red;
@@ -151,6 +173,17 @@ body {
         gap: pxToRem(8);
       }
     }
+  }
+}
+
+#time-list {
+  @include media(desktop) {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    gap: pxToRem(21);
+    padding-block-end: pxToRem(32);
+    padding-inline-start: pxToRem(32);
   }
 }
 

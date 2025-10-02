@@ -43,13 +43,13 @@ body {
   min-height: 100vh;
   min-height: 100svh;
   margin-block: 5.0625rem;
-  grid-template-columns: repeat(auto-fit, minmax(18.75rem, auto));
+  grid-template-columns: repeat(minmax(18.75rem, auto));
   gap: 1.5rem;
 }
 @media screen and (min-width: 48rem) {
   #cards-container {
     margin-block: 0;
-    grid-template-columns: repeat(minmax(11.75rem, auto));
+    grid-template-columns: repeat(3, minmax(11.75rem, auto));
   }
 }
 @media screen and (min-width: 80rem) {
@@ -104,12 +104,23 @@ body {
   border-radius: 15px;
   grid-column: 1/-1;
 }
+@media screen and (min-width: 80rem) {
+  .profile {
+    grid-template-columns: 15.9375rem;
+    grid-template-rows: 2fr 1fr;
+  }
+}
 .profile > div {
   display: flex;
   gap: 1.5rem;
   background-color: hsl(246, 80%, 60%);
   padding: 2rem;
   border-radius: 15px;
+}
+@media screen and (min-width: 80rem) {
+  .profile > div {
+    flex-direction: column;
+  }
 }
 .profile > div div {
   display: flex;
@@ -146,6 +157,11 @@ body {
   margin-right: -1px;
   margin-bottom: -1px;
 }
+@media screen and (min-width: 80rem) {
+  .card:not(.profile) > :nth-child(2):hover {
+    background-color: hsl(235, 41%, 34%);
+  }
+}
 .card:not(.profile) > :nth-child(2) > * {
   display: flex;
   justify-content: space-between;
@@ -154,11 +170,25 @@ body {
 .card:not(.profile) > :nth-child(2) > :first-child {
   margin-block-end: 0.5rem;
 }
+.card:not(.profile) > :nth-child(2) > :first-child :nth-child(2):hover {
+  filter: invert(100%) sepia(3%) saturate(12%) hue-rotate(103deg) brightness(1005%) contrast(105%);
+}
 @media screen and (min-width: 48rem) {
   .card:not(.profile) > :nth-child(2) > :nth-child(2) {
     flex-direction: column;
     align-items: start;
     gap: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 80rem) {
+  #time-list {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    gap: 1.3125rem;
+    padding-block-end: 2rem;
+    padding-inline-start: 2rem;
   }
 }
 
@@ -229,6 +259,15 @@ body {
   line-height: 1.1666;
   letter-spacing: 0;
   color: hsl(0, 100%, 100%);
+}
+@media screen and (min-width: 80rem) {
+  .profile > div :nth-child(2) {
+    font-family: "Rubik", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1.175;
+    letter-spacing: 0;
+  }
 }
 .profile > ul {
   font-family: "Rubik", sans-serif;
