@@ -59,6 +59,11 @@ body {
       min-width: pxToRem(188);
       grid-template-rows: 1fr pxToRem(180);
     }
+    @include media(desktop) {
+      min-width: pxToRem(255);
+      min-height: pxToRem(225);
+      grid-template-rows: 1fr pxToRem(180);
+    }
 
     > :nth-child(2) {
       padding: pxToRem(24);

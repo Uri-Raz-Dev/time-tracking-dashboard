@@ -91,6 +91,13 @@ body {
     grid-template-rows: 1fr 11.25rem;
   }
 }
+@media screen and (min-width: 80rem) {
+  #cards-container > *:not(.profile) {
+    min-width: 15.9375rem;
+    min-height: 14.0625rem;
+    grid-template-rows: 1fr 11.25rem;
+  }
+}
 #cards-container > *:not(.profile) > :nth-child(2) {
   padding: 1.5rem;
 }
