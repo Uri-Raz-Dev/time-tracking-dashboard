@@ -32,8 +32,8 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/responsive-landing-page-using-sass-an-flexbox-16qJFNzgBM)
-- Live Site URL: [Add live site URL here](https://uri-raz-dev.github.io/time-tracking-dashboard/)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/time-tracking-dashboard-using-grid-d0TYdV3Zgi)
+- Live Site URL: [Git repository](https://uri-raz-dev.github.io/time-tracking-dashboard/)
 
 ### Built with
 
@@ -50,8 +50,8 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 - Auto fit grid responsive design
 - How to filter svg color
 - Work with Chrome dev tools to change CSS
-- Use Changes tabs in Chrome dev tools to see past css changes
-- Scss @each very useful for adding styles into a list of elements
+- Use Changes tabs in Chrome dev tools to see past CSS changes
+- SASS @each very useful for adding styles into a list of elements
 
 ### Continued development
 
